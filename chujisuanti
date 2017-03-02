@@ -1,0 +1,156 @@
+import java.util.Scanner;
+
+
+public class suanshu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		int m=0;
+		while(m==0)
+		{
+			System.out.println("***************");
+			System.out.println("请输入要选择的选项：");
+			System.out.println(" 1.整数  ");
+			System.out.println(" 2.分数  ");
+			System.out.println(" 3.退出  ");
+			System.out.println("***************");
+			System.out.println(" 请选择：");
+			int a = input.nextInt();
+			if(a==1)
+			{
+				System.out.println("输入题目数量");
+				shu(input.nextInt());
+			}
+			if(a==2)
+			{
+				System.out.println("输入题目数量");
+				fen(input.nextInt());
+			}
+			if(a==3)
+			{
+				System.out.println("已退出");
+				System.exit(0);
+			}
+		}
+	}
+	public static void fen(int a) {
+		for(int b=0;b<a;b++)
+		{
+			int x = (int)(Math.random()*100);
+			int y = (int)(Math.random()*100);
+			int m = (int)(Math.random()*100);
+			int n = (int)(Math.random()*100);
+			int z = 1+(int)(Math.random()*4);
+			if(z==1)
+			{
+				if(x<y&&m<n)
+				{
+					System.out.println("("+x+"/"+y+")"+"+"+"("+m+"/"+n+")"+"="+"?");
+				}
+				else if(x<y&&m>n)
+				{
+					System.out.println("("+x+"/"+y+")"+"+"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else if(x>y&&m>n)
+				{
+					System.out.println("("+y+"/"+x+")"+"+"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else
+				{
+					System.out.println("("+y+"/"+x+")"+"+"+"("+m+"/"+n+")"+"="+"?");
+				}
+			}
+			if(z==2)
+			{
+				if(x<y&&m<n)
+				{
+					System.out.println("("+x+"/"+y+")"+"-"+"("+m+"/"+n+")"+"="+"?");
+				}
+				else if(x<y&&m>n)
+				{
+					System.out.println("("+x+"/"+y+")"+"-"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else if(x>y&&m>n)
+				{
+					System.out.println("("+y+"/"+x+")"+"-"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else
+				{
+					System.out.println("("+y+"/"+x+")"+"-"+"("+m+"/"+n+")"+"="+"?");
+				}
+			}
+			if(z==3)
+			{
+				if(x<y&&m<n)
+				{
+					System.out.println("("+x+"/"+y+")"+"*"+"("+m+"/"+n+")"+"="+"?");
+				}
+				else if(x<y&&m>n)
+				{
+					System.out.println("("+x+"/"+y+")"+"*"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else if(x>y&&m>n)
+				{
+					System.out.println("("+y+"/"+x+")"+"*"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else
+				{
+					System.out.println("("+y+"/"+x+")"+"*"+"("+m+"/"+n+")"+"="+"?");
+				}
+			}
+			if(z==4)
+			{
+				if(x<y&&m<n)
+				{
+					System.out.println("("+x+"/"+y+")"+"/"+"("+m+"/"+n+")"+"="+"?");
+				}
+				else if(x<y&&m>n)
+				{
+					System.out.println("("+x+"/"+y+")"+"/"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else if(x>y&&m>n)
+				{
+					System.out.println("("+y+"/"+x+")"+"/"+"("+n+"/"+m+")"+"="+"?");
+				}
+				else
+				{
+					System.out.println("("+y+"/"+x+")"+"/"+"("+m+"/"+n+")"+"="+"?");
+				}
+			}
+		}
+		
+	}
+	public static void shu(int a)
+	{
+		for(int b=0;b<a;b++)
+		{
+			int x = (int)(Math.random()*100);
+			int y = (int)(Math.random()*100);
+			int z = 1+(int)(Math.random()*4);
+			if(z==1)
+			{
+				System.out.println(x+"+"+y+"="+"?");
+			}
+			if(z==2)
+			{
+				if(x>y)
+				{
+					System.out.println(x+"-"+y+"="+"?");
+				}
+				else
+				{
+					System.out.println(y+"-"+x+"="+"?");
+				}
+			}
+			if(z==3)
+			{
+				System.out.println(x+"*"+y+"="+"?");
+			}
+			if(z==4)
+			{
+				System.out.println(x+"/"+y+"="+"?");
+			}
+		}
+	}
+}
